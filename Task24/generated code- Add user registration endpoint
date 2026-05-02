@@ -1,0 +1,4 @@
+@PostMapping("/register")
+public String registerUser(@RequestBody User user) {
+    return "User registered successfully";
+}

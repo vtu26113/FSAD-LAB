@@ -1,0 +1,11 @@
+@SpringBootTest
+class MyServiceTest {
+
+    @Autowired
+    private MyService service;
+
+    @Test
+    void testProcess() {
+        assertEquals("Processed", service.process());
+    }
+}

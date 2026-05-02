@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: service1
+          uri: lb://SERVICE1
+          predicates:
+            - Path=/service1/**

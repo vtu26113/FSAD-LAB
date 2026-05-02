@@ -1,0 +1,9 @@
+@RestController
+@RequestMapping("/students")
+public class StudentController {
+
+    @GetMapping
+    public String getAllStudents() {
+        return "List of students";
+    }
+}

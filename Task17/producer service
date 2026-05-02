@@ -1,0 +1,9 @@
+@RestController
+@RequestMapping("/api")
+public class ProducerController {
+
+    @GetMapping("/data")
+    public String getData() {
+        return "Hello from Service A";
+    }
+}

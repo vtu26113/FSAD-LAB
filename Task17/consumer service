@@ -1,0 +1,17 @@
+@RestController
+@RequestMapping("/consume")
+public class ConsumerController {
+
+    @Autowired
+    private RestTemplate restTemplate;
+
+    @GetMapping
+    public String consume() {
+        try {
+            return restTemplate.getForObject(
+                "http://SERVICE-A/api/data", String.class);
+        } catch (Exception e) {
+            return "Service unavailable";
+        }
+    }
+}
